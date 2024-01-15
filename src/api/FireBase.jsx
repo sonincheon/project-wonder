@@ -8,7 +8,8 @@ const firebaseConfig = {
   storageBucket: "wonderwalker-260db.appspot.com",
   messagingSenderId: "331447999362",
   appId: "1:331447999362:web:b6d8616f491db7ae7d0d9b",
-  measurementId: "G-VDK1QWG1FG"};
+  measurementId: "G-VDK1QWG1FG"
+};
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);

@@ -12,11 +12,11 @@ const CourseAxiosApi = {
   selectCourseDetail: async (code) => {
     return await axios.get(WONDER_WALKER + `/Course/Info?course_code=${code}`);
   },
-    //즐겨찾기한 내용만 가져오기  
-    SelectFavor: async (id) => {   
-     
-      return await axios.get(WONDER_WALKER + `/Course/SelectFavor/?id=${id}`);
-    },
+  //즐겨찾기한 내용만 가져오기  
+  SelectFavor: async (id) => {
+
+    return await axios.get(WONDER_WALKER + `/Course/SelectFavor/?id=${id}`);
+  },
 };
 
 export default CourseAxiosApi;

@@ -5,14 +5,14 @@ const WONDER_WALKER = "http://localhost:8111";
 
 const UserAxiosApi = {
 
-// 로그인
-Login: async (id, pw) => {
-  const login = {
-    id: id,
-    pwd: pw,
-  };
-  return await axios.post(WONDER_WALKER + "/users/login", login);
-},
+  // 로그인
+  Login: async (id, pw) => {
+    const login = {
+      id: id,
+      pwd: pw,
+    };
+    return await axios.post(WONDER_WALKER + "/users/login", login);
+  },
 
   // 회원가입시 아이디 체크
   SingupIdCheck: async (id) => {
@@ -20,52 +20,52 @@ Login: async (id, pw) => {
   },
 
   // 회원가입 inselrt
-  Signup: async (id,nick,pwd,name,addr,phone,email) => {
+  Signup: async (id, nick, pwd, name, addr, phone, email) => {
     const userInfo = {
       id: id,
-      nick:nick,
+      nick: nick,
       pwd: pwd,
       name: name,
-      addr:addr,
-      phone:phone,
+      addr: addr,
+      phone: phone,
       email: email,
     };
-    return await axios.post(WONDER_WALKER + `/users/signup`,userInfo);
+    return await axios.post(WONDER_WALKER + `/users/signup`, userInfo);
   },
 
 
   // ID로 회원정보 출력
-  Userinfo: async (id) => {   
+  Userinfo: async (id) => {
     return await axios.post(WONDER_WALKER + `/users/userinfo/?id=${id}`);
   },
 
 
   //  회원정보 변경
-  updateUserInfo: async (id,kind ,value) => {  
+  updateUserInfo: async (id, kind, value) => {
     const userInfo = {
       id: id,
       kind: kind,
-      value:value,
+      value: value,
     };
-    return await axios.post(WONDER_WALKER + `/users/updateUserInfo`,userInfo);
+    return await axios.post(WONDER_WALKER + `/users/updateUserInfo`, userInfo);
   },
 
 
   //  회원 비밀번호 변경
-  newPassword: async (userid,newPw) => {  
+  newPassword: async (userid, newPw) => {
     const userInfo = {
-      userid:userid,
-       newPw: newPw,
+      userid: userid,
+      newPw: newPw,
     };
-    return await axios.post(WONDER_WALKER + `/users/newPassword`,userInfo);
+    return await axios.post(WONDER_WALKER + `/users/newPassword`, userInfo);
   },
   //회원 삭제  
-  deleteUser1: async (userid) => {  
+  deleteUser1: async (userid) => {
     alert(userid)
     const userInfo = {
-      userid:userid,
+      userid: userid,
     };
-    return await axios.post(WONDER_WALKER + `/users/deleteUser`,userInfo);
+    return await axios.post(WONDER_WALKER + `/users/deleteUser`, userInfo);
   },
 }
 

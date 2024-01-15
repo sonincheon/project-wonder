@@ -20,7 +20,7 @@ const AxiosApi = {
   },
 
   //상품리스트 조회
-  goodsList: async (world,area,count) => {
+  goodsList: async (world, area, count) => {
     //겟 바디영역
     return await axios.get(WONDER_WALKER + `/Goods?world=${world}&area=${area}&count=${count}`);
   },
@@ -61,9 +61,9 @@ const AxiosApi = {
     };
     return await axios.post(WONDER_WALKER + "/Goods", Codes);
   },
-   //즐겨찾기한 내용만 가져오기  
-   SelectFavor: async (id) => {   
-      alert(id)
+  //즐겨찾기한 내용만 가져오기  
+  SelectFavor: async (id) => {
+    alert(id)
     return await axios.get(WONDER_WALKER + `/Goods/SelectFavor/?id=${id}`);
   },
 };
